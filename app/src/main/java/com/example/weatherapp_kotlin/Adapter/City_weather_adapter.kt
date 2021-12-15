@@ -30,11 +30,14 @@ class City_weather_adapter(val cities: List<Weather_response.Main>) :
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindItems(cityData: Weather_response.Main) {
-             val cityNameText:TextView = itemView.findViewById(R.id.cityNameTextID)
-             val conditionText:TextView = itemView.findViewById(R.id.conditionTextID)
-             val temperatureTextID:TextView = itemView.findViewById(R.id.temperatureTextID)
+            val cityNameText: TextView = itemView.findViewById(R.id.cityNameTextID)
+            val conditionText: TextView = itemView.findViewById(R.id.conditionTextID)
+            val temperatureText: TextView = itemView.findViewById(R.id.temperatureTextID)
+
+            var temp = (cityData.main.temp-273.15).toInt()
+            temperatureText.text = temp.toString()+" °C"
             cityNameText.text = cityData.name
-            //conditionText.text = cityData.address
+            conditionText.text = cityData.weather.get(0).description
         }
     }
 }

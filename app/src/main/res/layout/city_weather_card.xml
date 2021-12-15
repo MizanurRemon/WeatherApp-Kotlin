@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/distance10"
-    app:cardElevation="@dimen/distance10"
-    app:cardMaxElevation="@dimen/distance10"
+    app:cardElevation="5dp"
+    app:cardMaxElevation="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/grey"
-                android:textSize="15sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
